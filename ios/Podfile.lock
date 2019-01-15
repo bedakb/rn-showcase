@@ -1,0 +1,20 @@
+PODS:
+  - ReachabilitySwift (3)
+  - Webtrekk (4.13.0):
+    - ReachabilitySwift (~> 3.0.0)
+
+DEPENDENCIES:
+  - Webtrekk
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ReachabilitySwift
+    - Webtrekk
+
+SPEC CHECKSUMS:
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Webtrekk: 75efb5069f6915dac90850ec43accf77df42a2be
+
+PODFILE CHECKSUM: b894b8757b3caae9813f41259dc2b9eccff4c421
+
+COCOAPODS: 1.5.3

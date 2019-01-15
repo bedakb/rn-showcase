@@ -7,23 +7,18 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      message: ''
-    }
   }
 
   componentDidMount() {
-    NativeModules.Greeter.greet(message => {
-      this.setState({
-        message
-      })
+    NativeModules.Greeter.setup(message => {
+      console.log(message)
     })
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>{this.state.message}</Text>
+        <Text style={styles.welcome}>Hello.</Text>
       </View>
     );
   }

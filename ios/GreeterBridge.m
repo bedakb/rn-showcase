@@ -11,6 +11,6 @@
 
 @interface RCT_EXTERN_MODULE(Greeter, NSObject)
 
-RCT_EXTERN_METHOD(greet: (RCTResponseSenderBlock)callback)
+RCT_EXTERN_METHOD(setup: (RCTResponseSenderBlock)callback)
 
 @end

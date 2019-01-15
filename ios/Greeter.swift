@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Webtrekk
 
 @objc(Greeter)
 class Greeter: NSObject {
@@ -15,7 +16,9 @@ class Greeter: NSObject {
       return true
   }
   
-  @objc func greet(_ callback: RCTResponseSenderBlock) {
-    callback(["Hello there from Swift"])
+  @objc func setup(_ callback: RCTResponseSenderBlock) {
+    let instance = WebtrekkTracking.instance()
+    callback([instance.everId])
   }
+
 }
