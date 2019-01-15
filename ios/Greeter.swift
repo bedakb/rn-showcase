@@ -11,8 +11,11 @@ import Foundation
 @objc(Greeter)
 class Greeter: NSObject {
   
-  @objc func greet(_ message: String) -> String {
-    return "Hello there, " + message;
+  @objc static func requiresMainQueueSetup() -> Bool {
+      return true
   }
   
+  @objc func greet(_ callback: RCTResponseSenderBlock) {
+    callback(["Hello there from Swift"])
+  }
 }

@@ -11,8 +11,6 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import { NativeModules } from 'react-native';
 
-const greeter = NativeModules.Greeter;
-
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -21,16 +19,28 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+type State = {};
+export default class App extends Component<State, Props> {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      message: ''
+    }
+  }
+
   componentDidMount() {
-    console.log(greeter.greet)
+    NativeModules.Greeter.greet(message => {
+      this.setState({
+        message
+      })
+    })
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.welcome}>{this.state.message}</Text>
       </View>
     );
   }
