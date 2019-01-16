@@ -3,22 +3,20 @@ import {StyleSheet, Text, View} from 'react-native';
 
 import { NativeModules } from 'react-native';
 
+const RNWebtrekk = NativeModules.RNWebtrekk;
+
+RNWebtrekk.init();
+
 export default class App extends Component {
 
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    NativeModules.Greeter.setup(message => {
-      console.log(message)
-    })
-  }
-
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Hello.</Text>
+        <Text style={styles.welcome}>Hello there.</Text>
       </View>
     );
   }

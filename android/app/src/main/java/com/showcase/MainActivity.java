@@ -1,6 +1,12 @@
 package com.showcase;
 
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+import android.util.Log;
+
 import com.facebook.react.ReactActivity;
+import com.webtrekk.webtrekksdk.Webtrekk;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +17,12 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "showcase";
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Webtrekk.getInstance().track();
+        Log.wtf("name", Webtrekk.getInstance().getCurrentActivityName());
     }
 }

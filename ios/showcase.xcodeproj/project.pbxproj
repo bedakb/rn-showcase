@@ -40,6 +40,7 @@
 		55951605A0CB79ADC89AFADF /* Pods_showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D86982576A0DF2D5ED46F9 /* Pods_showcase.framework */; };
 		795CFFE0ED50D0FD89AB00E2 /* Pods_showcaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E43C87DF7ADA02951E441E2 /* Pods_showcaseTests.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		9F11C0FD21EE381200FC4E0B /* webtrekk_config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9F11C0FC21EE381200FC4E0B /* webtrekk_config.xml */; };
 		9F975EF721ECE0D400405C04 /* Greeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F975EF621ECE0D400405C04 /* Greeter.swift */; };
 		9F975EF921ECE19600405C04 /* GreeterBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F975EF821ECE19600405C04 /* GreeterBridge.m */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -361,6 +362,7 @@
 		826EE25A00283D7C3FEB7DA8 /* Pods-showcase-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showcase-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-showcase-tvOSTests/Pods-showcase-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9F11C08821EDFBAC00FC4E0B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9F11C0FC21EE381200FC4E0B /* webtrekk_config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = webtrekk_config.xml; sourceTree = "<group>"; };
 		9F975EF521ECE0D400405C04 /* showcase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "showcase-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F975EF621ECE0D400405C04 /* Greeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeter.swift; sourceTree = "<group>"; };
 		9F975EF821ECE19600405C04 /* GreeterBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreeterBridge.m; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55951605A0CB79ADC89AFADF /* Pods_showcase.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -393,7 +396,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				55951605A0CB79ADC89AFADF /* Pods_showcase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +608,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9F11C0FC21EE381200FC4E0B /* webtrekk_config.xml */,
 				13B07FAE1A68108700A75B9A /* showcase */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* showcaseTests */,
@@ -1106,6 +1109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				9F11C0FD21EE381200FC4E0B /* webtrekk_config.xml in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1387,6 +1391,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = showcase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1410,6 +1415,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = showcase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",

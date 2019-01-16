@@ -12,13 +12,31 @@ import Webtrekk
 @objc(Greeter)
 class Greeter: NSObject {
   
-  @objc static func requiresMainQueueSetup() -> Bool {
-      return true
+  // let instance = WebtrekkTracking.instance()
+  
+  @objc
+  static func requiresMainQueueSetup() -> Bool {
+    return true
   }
   
   @objc func setup(_ callback: RCTResponseSenderBlock) {
-    let instance = WebtrekkTracking.instance()
-    callback([instance.everId])
+    try! WebtrekkTracking.initTrack()
+    callback(["done"])
   }
+  
+  
+//  @objc func setup(_ callback: RCTResponseSenderBlock) {
+//    var parser: XMLParser?
+//    if let path = Bundle.main.path(forResource: "webtrekk_config", ofType: "xml") {
+//      parser = XMLParser(contentsOf: URL(fileURLWithPath: path))
+//      if parser?.parse() ?? false {
+//        callback(["fine"])
+//      } else {
+//        callback(["Unable to parse"])
+//      }
+//    } else {
+//      callback(["file read error"])
+//    }
+//  }
 
 }
