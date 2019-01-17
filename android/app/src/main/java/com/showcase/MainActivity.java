@@ -19,10 +19,4 @@ public class MainActivity extends ReactActivity {
         return "showcase";
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Webtrekk.getInstance().track();
-        Log.wtf("name", Webtrekk.getInstance().getCurrentActivityName());
-    }
 }

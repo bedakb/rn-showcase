@@ -1,16 +1,27 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-import { NativeModules } from 'react-native';
-
-const RNWebtrekk = NativeModules.RNWebtrekk;
-
-RNWebtrekk.init();
+import Webtrekk from './lib/react-native-webtrekk';
+Webtrekk.init();
 
 export default class App extends Component {
 
   constructor(props) {
     super(props);
+  }
+
+  async componentWillMount() {
+    const parameter = await this.addTrackingParameter()
+    const everId = await this.getEverId();
+    console.log(everId, parameter);
+  }
+
+  addTrackingParameter() {
+    return Webtrekk.addTrackingParameter('PAGE', '1', 'personalized');
+  }
+
+  getEverId() {
+    return Webtrekk.getEverId();
   }
 
   render() {
