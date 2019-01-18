@@ -6,7 +6,6 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.uimanager.IllegalViewOperationException;
 import com.webtrekk.webtrekksdk.Webtrekk;
 import com.webtrekk.webtrekksdk.TrackingParameter;
 import com.webtrekk.webtrekksdk.TrackingParameter.Parameter;
@@ -59,7 +58,7 @@ public class WebtrekkModule extends ReactContextBaseJavaModule {
     public void getVersion(Promise promise) {
         try {
             promise.resolve(instance.getVersion());
-        } catch (IllegalViewOperationException e) {
+        } catch (Exception e) {
             promise.reject(e);
         }
     }

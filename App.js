@@ -11,13 +11,14 @@ export default class App extends Component {
   }
 
   async componentWillMount() {
-    const parameter = await this.addTrackingParameter()
+    const pagepParameter = await this.addTrackingParameter('PAGE', '1', 'personalized');
+    const pageCatParameter = await this.addTrackingParameter('PAGE_CAT', '1', 'de');
     const everId = await this.getEverId();
-    console.log(everId, parameter);
+    console.log(everId, pagepParameter, pageCatParameter);
   }
 
-  addTrackingParameter() {
-    return Webtrekk.addTrackingParameter('PAGE', '1', 'personalized');
+  addTrackingParameter(parameter, index, value) {
+    return Webtrekk.addTrackingParameter(parameter, index, value);
   }
 
   getEverId() {
